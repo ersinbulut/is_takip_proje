@@ -30,5 +30,12 @@ namespace is_takip_proje
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void BtnPersonelİstatistik_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Formlar.FrmPersonelİstatistik frm = new Formlar.FrmPersonelİstatistik();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

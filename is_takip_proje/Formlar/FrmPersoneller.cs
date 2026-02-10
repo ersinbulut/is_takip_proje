@@ -89,7 +89,7 @@ namespace is_takip_proje.Formlar
             txtMAİL.Text = gridView1.GetFocusedRowCellValue("Mail").ToString();
             txtTELEFON.Text = gridView1.GetFocusedRowCellValue("Telefon").ToString();
             txtGORSEL.Text = gridView1.GetFocusedRowCellValue("Gorsel").ToString();
-            lpDEPARTMAN.EditValue = gridView1.GetFocusedRowCellValue("Departman").ToString();
+            lpDEPARTMAN.Text = gridView1.GetFocusedRowCellValue("Departman").ToString();
         }
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
