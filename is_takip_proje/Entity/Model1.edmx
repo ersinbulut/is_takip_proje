@@ -52,7 +52,7 @@
           <Property Name="GorevVeren" Type="int" />
           <Property Name="GorevAlan" Type="int" />
           <Property Name="Aciklama" Type="varchar" MaxLength="500" />
-          <Property Name="Durum" Type="nvarchar" MaxLength="20" />
+          <Property Name="Durum" Type="bit" />
           <Property Name="Tarih" Type="date" />
         </EntityType>
         <EntityType Name="TblPersonel">
@@ -176,7 +176,7 @@
           <Property Name="GorevVeren" Type="Int32" />
           <Property Name="GorevAlan" Type="Int32" />
           <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <Property Name="Durum" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Durum" Type="Boolean" />
           <Property Name="Tarih" Type="DateTime" Precision="0" />
           <NavigationProperty Name="TblPersonel" Relationship="Self.FK_TblGorevler_TblPersonel" FromRole="TblGorevler" ToRole="TblPersonel" />
           <NavigationProperty Name="TblPersonel1" Relationship="Self.FK_TblGorevler_TblPersonel1" FromRole="TblGorevler" ToRole="TblPersonel" />
