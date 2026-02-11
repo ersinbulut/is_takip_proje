@@ -14,19 +14,30 @@ namespace is_takip_proje.Formlar
 {
     public partial class FrmGorevDetay : Form
     {
+        DbİsTakipEntities db = new DbİsTakipEntities();
+        BindingSource bindingSource1 = new BindingSource();
         public FrmGorevDetay()
         {
             InitializeComponent();
         }
-
-        DbİsTakipEntities db = new DbİsTakipEntities();
         private void FrmGorevDetay_Load(object sender, EventArgs e)
         {
             db.TblGorevDetaylar.Load();
 
-            BindingSource bindingSource1 = new BindingSource();
+         
          bindingSource1.DataSource = db.TblGorevDetaylar.Local.ToBindingList();
             gridControl1.DataSource = bindingSource1;
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            db.SaveChanges();
+        }
+
+        private void görevDetaySilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bindingSource1.RemoveCurrent();
+            db.SaveChanges();
         }
     }
 }
