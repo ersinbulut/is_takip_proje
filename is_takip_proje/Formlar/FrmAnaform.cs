@@ -51,6 +51,19 @@ namespace is_takip_proje.Formlar
                                        }).Where(x => x.Durum == true).ToList();
             gridView3.Columns["Durum"].Visible = false;
 
+            //Fihrist komutları
+            gridControl4.DataSource = (from x in db.TblFirmalar
+                                       select new
+                                       {
+                                           x.Ad,
+                                           x.Telefon,
+                                           x.Mail
+                                       }).ToList();
+
+            //grafik işlemleri
+                chartControl1.Series["Series 1"].Points.AddPoint("Aktif Çağrı Sayısı", db.TblCagrilar.Where(x => x.Durum == true).Count());
+                chartControl1.Series["Series 1"].Points.AddPoint("Pasif Çağrı Sayısı", db.TblCagrilar.Where(x => x.Durum == false).Count());
+
 
 
         }
