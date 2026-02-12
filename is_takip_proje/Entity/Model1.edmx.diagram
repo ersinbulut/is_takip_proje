@@ -14,6 +14,9 @@
         <AssociationConnector Association="DbİsTakipModel.FK_TblPersonel_TblDepartmanlar" ManuallyRouted="false" />
         <AssociationConnector Association="DbİsTakipModel.FK_TblGorevler_TblPersonel" ManuallyRouted="false" />
         <AssociationConnector Association="DbİsTakipModel.FK_TblGorevler_TblPersonel1" ManuallyRouted="false" />
+        <AssociationConnector Association="DbİsTakipModel.FK_TblGorevDetaylar_TblGorevler" />
+        <EntityTypeShape EntityType="DbİsTakipModel.TblCagrilar" Width="1.5" PointX="5" PointY="8.125" />
+        <AssociationConnector Association="DbİsTakipModel.FK_TblCagrilar_TblFirmalar" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.BtnAnaForm = new DevExpress.XtraBars.BarButtonItem();
             this.btnDepartmanListesi = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
@@ -86,7 +86,7 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barButtonItem1,
+            this.BtnAnaForm,
             this.btnDepartmanListesi,
             this.barButtonItem3,
             this.barButtonItem4,
@@ -124,13 +124,14 @@
             this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(984, 150);
             // 
-            // barButtonItem1
+            // BtnAnaForm
             // 
-            this.barButtonItem1.Caption = "Anasayfa";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.BtnAnaForm.Caption = "Anasayfa";
+            this.BtnAnaForm.Id = 1;
+            this.BtnAnaForm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.BtnAnaForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.BtnAnaForm.Name = "BtnAnaForm";
+            this.BtnAnaForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnAnaForm_ItemClick);
             // 
             // btnDepartmanListesi
             // 
@@ -261,8 +262,8 @@
             // 
             this.BtnGorevDetay.Caption = "Görev Detayları";
             this.BtnGorevDetay.Id = 17;
-            this.BtnGorevDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.Image")));
-            this.BtnGorevDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
+            this.BtnGorevDetay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnGorevDetay.ImageOptions.Image")));
+            this.BtnGorevDetay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnGorevDetay.ImageOptions.LargeImage")));
             this.BtnGorevDetay.Name = "BtnGorevDetay";
             this.BtnGorevDetay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnGorevDetay_ItemClick);
             // 
@@ -339,7 +340,7 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup1.ItemLinks.Add(this.BtnAnaForm);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             // 
             // ribbonPage2
@@ -488,7 +489,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem BtnAnaForm;
         private DevExpress.XtraBars.BarButtonItem btnDepartmanListesi;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;

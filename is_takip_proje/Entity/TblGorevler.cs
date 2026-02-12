@@ -14,6 +14,12 @@ namespace is_takip_proje.Entity
     
     public partial class TblGorevler
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TblGorevler()
+        {
+            this.TblGorevDetaylar = new HashSet<TblGorevDetaylar>();
+        }
+    
         public int ID { get; set; }
         public Nullable<int> GorevVeren { get; set; }
         public Nullable<int> GorevAlan { get; set; }
@@ -23,5 +29,7 @@ namespace is_takip_proje.Entity
     
         public virtual TblPersonel TblPersonel { get; set; }
         public virtual TblPersonel TblPersonel1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TblGorevDetaylar> TblGorevDetaylar { get; set; }
     }
 }

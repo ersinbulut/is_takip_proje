@@ -90,6 +90,9 @@
     <Compile Include="Entity\TblAdmin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entity\TblCagrilar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entity\TblDepartmanlar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -110,6 +113,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FrmAnaform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FrmAnaform.Designer.cs">
+      <DependentUpon>FrmAnaform.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\FrmDepartmanlar.cs">
       <SubType>Form</SubType>
@@ -151,6 +160,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FrmAnaform.resx">
+      <DependentUpon>FrmAnaform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formlar\FrmDepartmanlar.resx">
       <DependentUpon>FrmDepartmanlar.cs</DependentUpon>

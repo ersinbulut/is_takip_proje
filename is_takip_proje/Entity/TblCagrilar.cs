@@ -12,14 +12,15 @@ namespace is_takip_proje.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class TblGorevDetaylar
+    public partial class TblCagrilar
     {
         public int ID { get; set; }
-        public Nullable<int> Gorev { get; set; }
+        public Nullable<int> CagriFirma { get; set; }
+        public string Konu { get; set; }
         public string Aciklama { get; set; }
         public Nullable<System.DateTime> Tarih { get; set; }
-        public string Saat { get; set; }
+        public Nullable<bool> Durum { get; set; }
     
-        public virtual TblGorevler TblGorevler { get; set; }
+        public virtual TblFirmalar TblFirmalar { get; set; }
     }
 }
